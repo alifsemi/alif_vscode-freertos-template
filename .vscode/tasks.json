@@ -244,7 +244,7 @@
             "type": "shell",
             "command": [
                 "echo Connect > .cmd.jlink &&",
-                "echo LoadFile \"out/blinky/AppKit-E8-HE/debug/blinky.elf\" >> .cmd.jlink &&",
+                "echo LoadFile \"out/FreeRTOS-Plus-TCP-demo/AppKit-E8-HE/debug/FreeRTOS-Plus-TCP-demo.elf\" >> .cmd.jlink &&",
                 "echo Exit >> .cmd.jlink &&",
                 "JLink.exe -device AE822FA0E5597BS0_M55_HE -if swd -speed 4000 -commandfile .cmd.jlink"
             ],

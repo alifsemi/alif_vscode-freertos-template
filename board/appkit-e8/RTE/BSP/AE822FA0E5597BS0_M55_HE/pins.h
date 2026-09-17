@@ -720,8 +720,8 @@ const struct pinconf board_pinconf[] = {
 
     /* P11_6 on pin AA14. Functions: [0]: GPIO11_6, [1]: OSPI1_D6_A, [2]: UART6_TX_B, [3]: LPPDM_D2_B,
        [4]: LPSPI_SCLK_B, [5]: UT7_T0_C, [6]: >>>ETH_RST_B<<<, [7]: CDC_D6_B */
-    /* Selected: ETH_RST_B for "RTL8201" */
-    {PORT_11, PIN_6, PINMUX_ALTERNATE_FUNCTION_6, PADCTRL_OUTPUT_DRIVE_STRENGTH_4MA},
+    /* GPIO11_6: RTL8201 nRST is active-low. AF6 ETH_RST does not release it. */
+    {PORT_11, PIN_6, PINMUX_ALTERNATE_FUNCTION_0, PADCTRL_OUTPUT_DRIVE_STRENGTH_4MA},
 
     /* P11_7 on pin AC16. Functions: [0]: GPIO11_7, [1]: OSPI1_D7_A, [2]: UART5_DE_B, [3]: LPPDM_D3_B,
        [4]: LPSPI_SS_B, [5]: UT7_T1_C, [6]: >>>ETH_IRQ_B<<<, [7]: CDC_D7_B */

@@ -13,6 +13,8 @@ solution:
 
   packs:
     - pack: AlifSemiconductor::Ensemble@2.2.0
+    - pack: AlifSemiconductor::FreeRTOSComponents@1.0.0
+    - pack: AWS::FreeRTOS-Plus-TCP@6.1.0
     - pack: ARM::CMSIS@6.1.0
     - pack: ARM::CMSIS-FreeRTOS@11.3.0
 
@@ -82,7 +84,7 @@ solution:
       target-set:
         - set:
           images:
-            - project-context: blinky.debug
+            - project-context: FreeRTOS-Plus-TCP-demo.debug
 
     - type: AppKit-E8-HP
       device: Alif Semiconductor::AE822FA0E5597BS0:M55_HP
@@ -110,3 +112,6 @@ solution:
 
   projects:
     - project: blinky/blinky.cproject.yml
+    - project: FreeRTOS-Plus-TCP-demo/FreeRTOS-Plus-TCP-demo.cproject.yml
+      not-for-context:
+        - +DevKit-E1C-HE
